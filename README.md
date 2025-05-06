@@ -13,5 +13,6 @@ After each lecture new code is published.
  Java Development Kit
  PostgresQL
  Visual Studio Code
- Eclips
+ Eclipse
  Chrome Developer Tools
+ Git/Github
