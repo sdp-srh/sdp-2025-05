@@ -2,6 +2,6 @@ package basic;
 
 public class HelloCourse {
 	public static void main(String[] args) {
-		System.out.println("Hello Course 2025!!!!");
+		System.out.println("Hello " + args[0]);
 	}
 }
