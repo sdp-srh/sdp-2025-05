@@ -11,7 +11,7 @@ public class SumOfArray {
 			sum1 = sum1 + values[i];
 		}
 		System.out.println("The sum1 is: "+ sum1);
-		
+		/*
 		int sum2 = 0;
 		for (int value: values) {
 			sum2 += value;
@@ -21,5 +21,6 @@ public class SumOfArray {
 		if (sum1 == sum2) {
 			System.out.println(" The results are equal");
 		}
+		*/
 	}
 }

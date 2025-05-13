@@ -7,6 +7,7 @@ public class StringCompareExample {
 		String s2="SRH";
 		String s3=new String("SRH");
 		String s4="sdp";
+		/*
 		System.out.println(s1.equals(s2));//true  
 		System.out.println(s1.equals(s3));//true  
 		System.out.println(s1.equals(s4));//false 
@@ -20,6 +21,7 @@ public class StringCompareExample {
 		System.out.println(two.compareTo(three));
 		if (two.compareTo(three) > 0) {
 			System.out.println(two +" is bigger than "+ three);
-		}		
+		}
+		*/		
 	}
 }

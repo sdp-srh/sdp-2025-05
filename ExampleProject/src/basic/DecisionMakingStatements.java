@@ -58,6 +58,7 @@ public class DecisionMakingStatements {
 		}
 		*/
 		// switch case
+		/*
 		switch (x) {
 			case 0: 
 				System.out.println("value is zero");
@@ -68,6 +69,7 @@ public class DecisionMakingStatements {
 			default: 
 				System.out.println("value is not zero");
 		}
+		*/
 		
 	}
 	
