@@ -28,7 +28,5 @@ public class DBConnectionTest {
 				System.out.println(person.getFirstName()+" "+person.getLastName());
 			}	
 		}
-		
-		
 	}
 }
