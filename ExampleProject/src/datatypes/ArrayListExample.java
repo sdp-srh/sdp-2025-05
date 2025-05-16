@@ -12,13 +12,16 @@ public class ArrayListExample {
 		list.add("Grapes");
 		// Printing the arraylist object
 		System.out.println(list);
+		System.out.println("");
+		list.add("Orange");
 		
 		// Traversing list through Iterator
+		
 		Iterator<String> itr = list.iterator();// getting the Iterator
 		while (itr.hasNext()) {// check if iterator has the elements
 			System.out.println(itr.next());// printing the element and move to next
 		}
-		
+		/*
 		System.out.println("");
 		for (String element : list) {
 			System.out.println(element);
@@ -29,7 +32,7 @@ public class ArrayListExample {
 		for (int i= list.size()-1;i>=0;i--) {
 			System.out.println(""+i+" : "+list.get(i));
 		}
-		
+		*/
 	}
 
 }
