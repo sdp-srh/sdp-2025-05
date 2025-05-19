@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>WebProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>MyServlet</display-name>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>servlets.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/MyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowPersonsServlet</display-name>
+    <servlet-name>ShowPersonsServlet</servlet-name>
+    <servlet-class>servlets.ShowPersonsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowPersonsServlet</servlet-name>
+    <url-pattern>/ShowPersonsServlet</url-pattern>
+    <url-pattern>/showpersons</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateNewPersonServlet</display-name>
+    <servlet-name>CreateNewPersonServlet</servlet-name>
+    <servlet-class>servlets.CreateNewPersonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateNewPersonServlet</servlet-name>
+    <url-pattern>/CreateNewPersonServlet</url-pattern>
+    <url-pattern>/newperson</url-pattern>
+  </servlet-mapping>
+</web-app>

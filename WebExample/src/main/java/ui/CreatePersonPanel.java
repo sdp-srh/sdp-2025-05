@@ -1,4 +1,4 @@
-package application;
+package ui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import application.DBHandler;
-import application.Person;
+import data.Person;
 
 /**
  * inherits from JPanel
@@ -21,11 +21,10 @@ import application.Person;
 public class CreatePersonPanel extends JPanel implements ActionListener {
 	
 	public static final String SAVE_PERSON_COMMAND = "SAVE_PERSON";
-	public static final String RESET_FORM = "RESET_FORM";
 	// the fields are important to get the first and last name
-	private JTextField firstNameField;
-	private JTextField lastNameField;
-	private JButton saveButton;
+	JTextField firstNameField;
+	JTextField lastNameField;
+	JButton saveButton;
 	
 	
 	public CreatePersonPanel() {
@@ -36,37 +35,27 @@ public class CreatePersonPanel extends JPanel implements ActionListener {
 		// create label and field to first and lastname
 		JLabel firstNameLabel = new JLabel("Firstname");
 		this.add(firstNameLabel);
-		this.firstNameField = new JTextField(20);
+		firstNameField = new JTextField(20);
 		// avoids larget text fields
-		this.firstNameField.setMaximumSize( this.firstNameField.getPreferredSize() );
-		this.add(this.firstNameField);   
+		firstNameField.setMaximumSize( firstNameField.getPreferredSize() );
+		this.add(firstNameField);   
 		
 		JLabel lastNameLabel = new JLabel("Lastname");
 		this.add(lastNameLabel);
 		lastNameField = new JTextField(20);
 		lastNameField.setMaximumSize( lastNameField.getPreferredSize() );
 		this.add(lastNameField);  	
-		JPanel buttonPanel = new JPanel();
-		BoxLayout buttonLayout =new BoxLayout(buttonPanel, BoxLayout.X_AXIS);
-		buttonPanel.setLayout(buttonLayout);
+		
 		// creates the save button and assigns the event listener for the button click
 		// the event listener is implemented in this class
 		JButton saveButton = new JButton("Save");
 		saveButton.setActionCommand(SAVE_PERSON_COMMAND);
 		saveButton.addActionListener(this);
-		buttonPanel.add(saveButton);
-		
-		JButton resetButton = new JButton("Reset");
-		resetButton.setActionCommand(RESET_FORM);
-		resetButton.addActionListener(this);
-		buttonPanel.add(resetButton);
-		this.add(buttonPanel);
-		
+		this.add(saveButton);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("ACTION IS TRIGGERED: "+e.getActionCommand());
 		// saves the person data in case the person command is provided
 		if (SAVE_PERSON_COMMAND.equals(e.getActionCommand())) {
 			Person newPerson = new Person();
@@ -77,10 +66,6 @@ public class CreatePersonPanel extends JPanel implements ActionListener {
 			DBHandler dbh = new DBHandler();
 			dbh.insertPerson(newPerson);
 			System.out.println("New Person created");
-		}
-		if (RESET_FORM.equals(e.getActionCommand())) {
-			firstNameField.setText("");
-			lastNameField.setText("");
 		}
 		
 	}
