@@ -7,9 +7,9 @@ import java.util.Collections;
 public class SortExample {
 
 	public static void main(String args[]) {
-		//comparePersonsExample();
+		comparePersonsExample();
 		//sortPersonListExample();
-		sortPersonListWithComparatorExample();
+		//sortPersonListWithComparatorExample();
 	}
 	
 	public static void comparePersonsExample() {
