@@ -8,7 +8,7 @@ public class FileSystemWalker {
 	// for ease of use the main function is in the calls
 	public static void main(String args[]) {
 		FileSystemWalker fsw = new FileSystemWalker();
-		fsw.readFolder(new File("C:\\srh\\github\\sdp-2025-05\\ExampleProject\\src"));
+		fsw.readFolder(new File("C:\\srh\\github\\sdp-2025-05\\ExampleProject"));
 		fsw.printEntries();
 	}
 	
