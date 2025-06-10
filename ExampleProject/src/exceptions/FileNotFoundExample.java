@@ -3,6 +3,7 @@ package exceptions;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class FileNotFoundExample {
 
@@ -17,19 +18,21 @@ public class FileNotFoundExample {
 	
 	public static void main(String args[]) {
 		try {
-			//File file = new File("C://xyz.txt");
+			// File file = new File("C://xyz.txt");
 			//FileReader fr = new FileReader(file);
-			//File file2 = readMyFile("C://xyz.txt");
+			File file2 = readMyFile("C://xyz.txt");
 			File file3 = readMyFile("C://temp/AppScript.txt");
 		} catch (MyFileNotFoundException e) {
 			e.printStackTrace();
 			e.getMessage();
 		}
+		/*
 		try {
 			File file4 = readMyFile("");
 		} catch (MyFileNotFoundException e) {
 			e.printStackTrace();
 		}
+		*/
 		System.out.println("Finished");
 	}
 }
